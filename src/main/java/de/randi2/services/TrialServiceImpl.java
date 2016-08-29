@@ -399,6 +399,7 @@ public class TrialServiceImpl implements TrialService {
 	
 	@Override
 	@Secured({ "ROLE_USER", "AFTER_ACL_COLLECTION_READ" })
+	@Transactional(readOnly = true)
 	public List<Trial> getAll(TrialSite site) {
 		if (site == null)
 			return null;
