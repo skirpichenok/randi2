@@ -139,7 +139,7 @@
 		<org.springframework.security.version>3.0.5.RELEASE</org.springframework.security.version>
 		<hsqldb.version>1.8.0.7</hsqldb.version>
 		<mysql5.version>5.1.12</mysql5.version>
-		<postgresql84.version>8.4-701.jdbc4</postgresql84.version>
+		<postgresql.version>9.4.1209.jre7</postgresql.version>
 		<jtds.version>1.2.4</jtds.version>
 		<derby.version>10.4.2.0</derby.version>
 		<oracle.version>10.2.0.3.0</oracle.version>
@@ -192,7 +192,11 @@
 		<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
 		<!-- Compile Dependencies -->
 		<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
-
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>${postgresql.version}</version>
+		</dependency>
 		<!-- Spring dependencies -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -802,9 +806,9 @@
 			</properties>
 			<dependencies>
 				<dependency>
-					<groupId>postgresql</groupId>
+					<groupId>org.postgresql</groupId>
 					<artifactId>postgresql</artifactId>
-					<version>${postgresql84.version}</version>
+					<version>${postgresql.version}</version>
 					<scope>test</scope>
 				</dependency>
 			</dependencies>
